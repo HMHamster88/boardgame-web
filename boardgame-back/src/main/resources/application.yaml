@@ -1,0 +1,38 @@
+server:
+  unauthorizedUrls: >
+    /api/auth/signin,
+    /api/auth/refresh,
+    /api/auth/signup,
+    /v3/api-docs,
+    /swagger-ui/**,
+    /error,
+    /api/websocket
+  error:
+    include-message: ALWAYS
+
+spring:
+  application:
+    name: boardgame
+  jpa:
+    properties:
+      hibernate:
+        globally_quoted_identifiers: true
+        globally_quoted_identifiers_skip_column_definitions: true
+  data:
+    mongodb:
+      host: 'localhost'
+      port: 27017
+      database: 'boardgame'
+logging:
+  level:
+    org:
+      springframework:
+        web: 'DEBUG'
+springdoc:
+  remove-broken-reference-definitions: false
+  packagesToScan: com.hmhamster.boardgame
+
+jwt:
+  secret: 53A73E5F1C4E0A2D3B5F2D784E6A1B423D6F247D1F6E5C3A596D635A75327855
+  accessTokenExpiration: 600000
+  refreshTokenExpiration: 10080000

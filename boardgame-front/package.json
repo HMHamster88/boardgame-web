@@ -1,0 +1,40 @@
+{
+  "name": "boardgame-front",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 0.0.0.0",
+    "build": "vue-tsc -b && vite build",
+    "build-only": "vite build",
+    "preview": "vite preview",
+    "generate-api": "swagger-typescript-api generate --templates .\\openapi-templates --enum-names-as-values --http-client axois --path http://localhost:8080/v3/api-docs --output .\\src\\api\\ --name openapi.ts"
+  },
+  "dependencies": {
+    "@primevue/forms": "^4.4.1",
+    "@primevue/themes": "^4.4.1",
+    "@tailwindcss/vite": "^4.1.17",
+    "axios": "^1.13.2",
+    "mitt": "^3.0.1",
+    "pinia": "^3.0.4",
+    "pinia-plugin-persistedstate": "^4.7.1",
+    "primeicons": "^7.0.0",
+    "primevue": "^4.4.1",
+    "swagger-typescript-api": "^13.2.16",
+    "tailwindcss": "^4.1.17",
+    "tailwindcss-primeui": "^0.6.1",
+    "vue": "^3.5.24",
+    "vue-router": "^4.6.3",
+    "zod": "^4.1.12"
+  },
+  "devDependencies": {
+    "@primevue/auto-import-resolver": "^4.4.1",
+    "@types/node": "^24.10.1",
+    "@vitejs/plugin-vue": "^6.0.1",
+    "@vue/tsconfig": "^0.8.1",
+    "typescript": "~5.9.3",
+    "unplugin-vue-components": "^30.0.0",
+    "vite": "^7.2.4",
+    "vue-tsc": "^3.1.4"
+  }
+}
